@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка файла</title>
+</head>
+<body>
+    <form action="/top" method="POST" enctype="multipart/form-data">
+        <p>
+            <label for="file">File:</label>
+            <input id="file" name="file" type="file" accept="text/csv" required>
+        </p>
+        <p>
+            <label for="field">Field:</label>
+            <input id="field" name="field" type="number" required>
+        </p>
+        <p>
+            <label for="count">Count:</label>
+            <input id="count" name="count" type="number" required>
+        </p>
+        <input type="submit">
+    </form>
+    <span th:text="${error}"></span>
+</body>
+</html>
